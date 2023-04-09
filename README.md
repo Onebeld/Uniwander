@@ -10,7 +10,7 @@ After creating a galaxy, the player will be prompted on which star system the ga
 - Colonist: The player will control his colony and its expansion. Resource gathering is simple here, as the colonies mine them themselves.
 - Wanderer: The player will not have his own colony and will have to gather resources and money by himself.
 
-Further gameplay may be similar to the Cosmos phase of Electronic Arts' Spore game - exploring planets, terraforming, etc.
+Further gameplay may be similar to the Space Stage of Electronic Arts' Spore game - exploring planets, terraforming, etc.
 
 In order to extract some gas, it is necessary to collect in the Gas Giants. The player will have the opportunity to fly over the Gas Giant, but not too low, as high pressure can damage the spaceship. To establish a colony on the Gas Giants you will need a separate tool that allows you to create colonies hovering over the planet. To gather gas alone requires either a special hovering device or a tool (which wastes a lot of energy).
 
