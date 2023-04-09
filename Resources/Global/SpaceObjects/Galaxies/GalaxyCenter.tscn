@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://juaygo0qu3oc"]
+
+[ext_resource type="Script" path="res://Scripts/Global/SpaceObjects/Galaxy/GalaxyCenter.cs" id="1_ae0ag"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_f2bfu"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_38m1g"]
+
+[node name="GalaxyCenter" type="StaticBody3D"]
+script = ExtResource("1_ae0ag")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.64271, 0, 0, 0, 1.64271, 0, 0, 0, 1.64271, 0, 0, 0)
+shape = SubResource("SphereShape3D_f2bfu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.672165, 0, 0, 0, 0.672165, 0, 0, 0, 0.672165, 0, 0, 0)
+mesh = SubResource("TorusMesh_38m1g")
+
+[connection signal="input_event" from="." to="." method="_OnInputEvent"]
+[connection signal="mouse_entered" from="." to="." method="_OnMouseEntered"]
