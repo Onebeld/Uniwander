@@ -3,5 +3,6 @@
     <TargetFramework>net6.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <Nullable>enable</Nullable>
+    <UserSecretsId>11718454-537e-4b21-8964-121260a405e3</UserSecretsId>
   </PropertyGroup>
 </Project>
