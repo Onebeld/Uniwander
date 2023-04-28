@@ -1,6 +1,4 @@
-﻿using Godot;
-
-namespace Uniwander.Scripts.Global.Constants;
+﻿namespace Uniwander.Scripts.Global.Constants;
 
 public static class StarColors
 {

@@ -1,7 +1,4 @@
-﻿using System;
-using Godot;
-
-namespace Uniwander.Scripts.Global.SolarObjects;
+﻿namespace Uniwander.Scripts.Global.SolarObjects;
 
 [Tool]
 public partial class OrbitingSolarObjects : ClickableSolarObject

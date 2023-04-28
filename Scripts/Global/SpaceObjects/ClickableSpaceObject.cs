@@ -1,6 +1,4 @@
-﻿using Godot;
-
-public partial class ClickableSpaceObject : StaticBody3D
+﻿public partial class ClickableSpaceObject : StaticBody3D
 {
     public virtual void _OnMouseEntered()
     {
