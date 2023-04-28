@@ -1,3 +1,5 @@
+namespace Uniwander.Global;
+
 using Uniwander.Global.SolarObjects;
 
 [Tool]

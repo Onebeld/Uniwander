@@ -4,6 +4,10 @@ global using System.Collections.Generic;
 global using System.Diagnostics;
 global using System.Linq;
 
+using Uniwander.Global.Interfaces;
+
+namespace Uniwander;
+
 public partial class GalaxyScene : Node3D, IBasicScene
 {
 	// Called when the node enters the scene tree for the first time.

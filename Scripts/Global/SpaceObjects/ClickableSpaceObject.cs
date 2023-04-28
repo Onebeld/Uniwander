@@ -1,4 +1,6 @@
-﻿public partial class ClickableSpaceObject : StaticBody3D
+﻿namespace Uniwander.Global;
+
+public partial class ClickableSpaceObject : StaticBody3D
 {
     public virtual void _OnMouseEntered()
     {

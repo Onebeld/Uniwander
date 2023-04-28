@@ -1,3 +1,5 @@
+namespace Uniwander;
+
 public partial class StarInformation : Control
 {
 	[Export]

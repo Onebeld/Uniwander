@@ -1,3 +1,5 @@
+namespace Uniwander.Global;
+
 public partial class Wormhole : ClickableSpaceObject
 {
 	[Export]

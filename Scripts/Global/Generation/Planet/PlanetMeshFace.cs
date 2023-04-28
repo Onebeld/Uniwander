@@ -1,3 +1,5 @@
+namespace Uniwander.Global;
+
 using Array = Godot.Collections.Array;
 
 [Tool]

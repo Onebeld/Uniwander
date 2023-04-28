@@ -1,3 +1,5 @@
+namespace Uniwander.Global;
+
 [Tool]
 public partial class GalaxyCenter : ClickableSpaceObject
 {
