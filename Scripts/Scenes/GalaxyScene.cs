@@ -1,5 +1,8 @@
-using Godot;
-using System;
+global using Godot;
+global using System;
+global using System.Collections.Generic;
+global using System.Diagnostics;
+global using System.Linq;
 
 public partial class GalaxyScene : Node3D, IBasicScene
 {
