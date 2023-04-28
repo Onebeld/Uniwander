@@ -1,4 +1,4 @@
-﻿namespace Uniwander.Scripts.Global.Interfaces.SpaceObjects.Star;
+﻿namespace Uniwander.Global.Interfaces.SpaceObjects.Star;
 
 public interface IDoubleStar
 {

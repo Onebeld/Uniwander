@@ -1,4 +1,4 @@
-﻿namespace Uniwander.Scripts.Global.SolarObjects;
+﻿namespace Uniwander.Global.SolarObjects;
 
 [Tool]
 public partial class OrbitingSolarObjects : ClickableSolarObject

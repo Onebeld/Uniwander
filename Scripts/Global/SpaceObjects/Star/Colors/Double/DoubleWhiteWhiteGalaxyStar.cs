@@ -1,6 +1,6 @@
-﻿using Uniwander.Scripts.Global.Constants;
+﻿using Uniwander.Global.Constants;
 
-namespace Uniwander.Scripts.Global.SpaceObjects.Star.Colors.Double;
+namespace Uniwander.Global.SpaceObjects.Star.Colors.Double;
 
 public partial class DoubleWhiteWhiteGalaxyStar : DoubleGalaxyStar
 {

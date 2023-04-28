@@ -1,4 +1,4 @@
-using Uniwander.Scripts.Global.SolarObjects;
+using Uniwander.Global.SolarObjects;
 
 [Tool]
 public partial class Planet : OrbitingSolarObjects

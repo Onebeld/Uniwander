@@ -1,4 +1,4 @@
-﻿namespace Uniwander.Scripts.Global.Constants;
+﻿namespace Uniwander.Global.Constants;
 
 public static class StarColors
 {

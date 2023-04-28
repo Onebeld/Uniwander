@@ -1,7 +1,7 @@
-﻿using Uniwander.Scripts.Global.Constants;
-using Uniwander.Scripts.Global.Interfaces.SpaceObjects.Star;
+﻿using Uniwander.Global.Constants;
+using Uniwander.Global.Interfaces.SpaceObjects.Star;
 
-namespace Uniwander.Scripts.Global.SpaceObjects.Star.Colors.Single;
+namespace Uniwander.Global.SpaceObjects.Star.Colors.Single;
 
 [Tool]
 public partial class SingleBlueGalaxyStarColor : SingleGalaxyStar
