@@ -1,5 +1,4 @@
-using Godot;
-using System;
+namespace Uniwander;
 
 public partial class StarInformation : Control
 {
@@ -18,15 +17,5 @@ public partial class StarInformation : Control
 			if (_labelStarId is not null)
 				_labelStarId.Text = StarName;
 		}
-	}
-	
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready()
-	{
-	}
-
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
-	{
 	}
 }

@@ -1,4 +1,4 @@
-﻿using Godot;
+﻿namespace Uniwander.Global;
 
 public partial class ClickableSpaceObject : StaticBody3D
 {

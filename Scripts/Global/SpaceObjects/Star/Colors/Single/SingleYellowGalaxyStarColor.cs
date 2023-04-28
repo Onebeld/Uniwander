@@ -1,7 +1,6 @@
-﻿using Godot;
-using Uniwander.Scripts.Global.Constants;
+﻿using Uniwander.Global.Constants;
 
-namespace Uniwander.Scripts.Global.SpaceObjects.Star.Colors.Single;
+namespace Uniwander.Global.SpaceObjects.Star.Colors.Single;
 
 [Tool]
 public partial class SingleYellowGalaxyStarColor : SingleGalaxyStar

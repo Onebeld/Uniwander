@@ -1,4 +1,4 @@
-﻿namespace Uniwander.Scripts.Global.SpaceObjects.Star;
+﻿namespace Uniwander.Global.SpaceObjects.Star;
 
 public partial class GalaxyStar : ClickableSpaceObject
 {

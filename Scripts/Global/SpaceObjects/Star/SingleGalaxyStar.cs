@@ -1,8 +1,7 @@
-﻿using Godot;
-using Uniwander.Scripts.Global.Constants;
-using Uniwander.Scripts.Global.Interfaces.SpaceObjects.Star;
+﻿using Uniwander.Global.Constants;
+using Uniwander.Global.Interfaces.SpaceObjects.Star;
 
-namespace Uniwander.Scripts.Global.SpaceObjects.Star;
+namespace Uniwander.Global.SpaceObjects.Star;
 
 [Tool]
 public partial class SingleGalaxyStar : GalaxyStar, ISingleStar

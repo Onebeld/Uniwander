@@ -1,8 +1,7 @@
-﻿using Godot;
-using Uniwander.Scripts.Global.Constants;
-using Uniwander.Scripts.Global.Interfaces.SpaceObjects.Star;
+﻿using Uniwander.Global.Constants;
+using Uniwander.Global.Interfaces.SpaceObjects.Star;
 
-namespace Uniwander.Scripts.Global.SpaceObjects.Star.Colors.Double;
+namespace Uniwander.Global.SpaceObjects.Star.Colors.Double;
 
 public partial class DoubleRedRedGalaxyStarColors : DoubleGalaxyStar
 {

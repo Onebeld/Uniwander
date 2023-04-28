@@ -1,9 +1,6 @@
-using Godot;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using Uniwander.Scripts.Global.SolarObjects;
+namespace Uniwander.Global;
+
+using Uniwander.Global.SolarObjects;
 
 [Tool]
 public partial class Planet : OrbitingSolarObjects
@@ -32,7 +29,6 @@ public partial class Planet : OrbitingSolarObjects
 		}
 	}
 	
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		OnDataChanged();

@@ -1,5 +1,4 @@
-using Godot;
-using System;
+namespace Uniwander.Global.Interfaces;
 
 public interface IBasicScene
 {
