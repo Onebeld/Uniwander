@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://xm6hg3e51n07"]
+
+[ext_resource type="Script" path="res://Scripts/Scenes/PlanetScene.cs" id="1_16n8e"]
+[ext_resource type="Script" path="res://Scripts/Camera/GameCamera.cs" id="2_6j6xl"]
+[ext_resource type="PackedScene" uid="uid://djs6pqmho85fo" path="res://Scripts/UI/MainGameInterface.tscn" id="2_freid"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_anfwd"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gnxgq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tq5c0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u112i"]
+size = Vector3(1.99741, 0.00768183, 2.00077)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wmwxt"]
+
+[sub_resource type="Environment" id="Environment_web3b"]
+background_mode = 1
+
+[node name="PlanetScene" type="Node3D"]
+script = ExtResource("1_16n8e")
+
+[node name="MainCamera" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.962004, 0.273036, 0, -0.273036, 0.962004, 0, 8.15284, 12.8663)
+script = ExtResource("2_6j6xl")
+_acceleration = null
+_moveSpeed = null
+_mouseSpeed = null
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.99969, 0)
+collision_layer = 0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+mesh = SubResource("CapsuleMesh_anfwd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("CapsuleShape3D_gnxgq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(11, 0, 0, 0, 11, 0, 0, 0, 11, 0, 0, 0)
+mesh = SubResource("PlaneMesh_tq5c0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(11, 0, 0, 0, 11, 0, 0, 0, 11, 0, 0, 0)
+shape = SubResource("BoxShape3D_u112i")
+
+[node name="MainGameInterface" parent="." instance=ExtResource("2_freid")]
+
+[node name="RigidBody3D2" type="RigidBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D2"]
+mesh = SubResource("BoxMesh_wmwxt")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_web3b")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.479182, 0.877715, 0, -0.877715, 0.479182, 0, 4.79052, 16.607)

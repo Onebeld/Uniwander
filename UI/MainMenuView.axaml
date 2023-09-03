@@ -1,0 +1,28 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Uniwander.UI.MainMenuView">
+    <Panel>
+        <Panel HorizontalAlignment="Right" VerticalAlignment="Center" Width="400" Margin="0 0 20 0">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Uniwander" FontSize="42" FontWeight="Bold" HorizontalAlignment="Center" />
+            
+                <Button Content="Start" />
+                <Button Content="About" />
+        
+                <Button Content="Quit" Margin="0 10 0 0" HorizontalAlignment="Center" MinWidth="200" />
+                <TextBlock Text="Ver: 0.1.0" HorizontalAlignment="Center" />
+            </StackPanel>
+        </Panel>
+        
+        <Path Data="{StaticResource OnebeldIcon}"
+              Width="150"
+              Fill="White" 
+              Margin="35"
+              HorizontalAlignment="Left"
+              VerticalAlignment="Bottom"
+              Stretch="Uniform"/>
+    </Panel>
+</UserControl>

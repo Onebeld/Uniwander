@@ -1,17 +1,22 @@
-global using Godot;
-global using System;
-global using System.Collections.Generic;
-global using System.Diagnostics;
-global using System.Linq;
+using Godot;
+using Uniwander.Scripts;
+using Uniwander.Scripts.Enums;
 
-using Uniwander.Global.Interfaces;
-
-namespace Uniwander;
-
-public partial class GalaxyScene : Node3D, IBasicScene
+public partial class GalaxyScene : Uniwander.Scripts.Scenes.GameScene
 {
+	[Export]
+	public GalaxyPlayerSpaceship Player { get; set; } = null!;
+	
+	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		base._Ready();
+		
+		Global.GameScene = GameScene.GalaxyScene;
+	}
 
+	public override void _PhysicsProcess(double delta)
+	{
+		base._PhysicsProcess(delta);
 	}
 }

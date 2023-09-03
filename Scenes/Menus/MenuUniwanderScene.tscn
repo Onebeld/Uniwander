@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwpaiwbulcif4"]
+
+[ext_resource type="Script" path="res://Scripts/UI/MainMenuUserInterface.cs" id="1_wbc6b"]
+[ext_resource type="Shader" path="res://UI/Shaders/night_sky.gdshader" id="2_syeqk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4r4dt"]
+shader = ExtResource("2_syeqk")
+
+[sub_resource type="Environment" id="Environment_n1pyr"]
+background_mode = 1
+
+[node name="MenuUniwanderScene" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Stars" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_4r4dt")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="AvaloniaControl" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wbc6b")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n1pyr")
