@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://5thwwtgghskc"]
 
 [ext_resource type="Script" path="res://Scripts/Scenes/GalaxyScene.cs" id="1_bw5qr"]
-[ext_resource type="PackedScene" uid="uid://dxu3tp1tlem5s" path="res://GameObjects/SpaceObjects/Galaxies/Virgio/VirgioGalaxy.tscn" id="2_1nwei"]
-[ext_resource type="PackedScene" path="res://GameObjects/Spaceships/GalaxySpaceShips/GalaxyPlayerSpaceship.tscn" id="3_2fgn0"]
+[ext_resource type="PackedScene" uid="uid://bla511eoybshg" path="res://GameObjects/SpaceObjects/Galaxies/Virgio/VirgioGalaxy.tscn" id="2_1nwei"]
+[ext_resource type="PackedScene" uid="uid://bq0jhqqtcdh08" path="res://GameObjects/Spaceships/GalaxySpaceShips/GalaxyPlayerSpaceship.tscn" id="3_2fgn0"]
 [ext_resource type="Script" path="res://Scripts/Entities/Character.cs" id="4_excr3"]
 [ext_resource type="Script" path="res://Scripts/Camera/GameCamera.cs" id="5_bplft"]
 
@@ -23,140 +23,8 @@ Player = NodePath("GalaxyPlayerSpaceship")
 
 [node name="VirgioGalaxy" parent="." instance=ExtResource("2_1nwei")]
 
-[node name="SpaceStar" parent="VirgioGalaxy/SpaceStars" index="0" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar2" parent="VirgioGalaxy/SpaceStars" index="1" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar3" parent="VirgioGalaxy/SpaceStars" index="2" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar4" parent="VirgioGalaxy/SpaceStars" index="3" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar5" parent="VirgioGalaxy/SpaceStars" index="4" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar6" parent="VirgioGalaxy/SpaceStars" index="5" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar7" parent="VirgioGalaxy/SpaceStars" index="6" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar8" parent="VirgioGalaxy/SpaceStars" index="7" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar9" parent="VirgioGalaxy/SpaceStars" index="8" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar10" parent="VirgioGalaxy/SpaceStars" index="9" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar11" parent="VirgioGalaxy/SpaceStars" index="10" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar12" parent="VirgioGalaxy/SpaceStars" index="11" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar13" parent="VirgioGalaxy/SpaceStars" index="12" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar14" parent="VirgioGalaxy/SpaceStars" index="13" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar15" parent="VirgioGalaxy/SpaceStars" index="14" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar16" parent="VirgioGalaxy/SpaceStars" index="15" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar17" parent="VirgioGalaxy/SpaceStars" index="16" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar18" parent="VirgioGalaxy/SpaceStars" index="17" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar19" parent="VirgioGalaxy/SpaceStars" index="18" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar20" parent="VirgioGalaxy/SpaceStars" index="19" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar21" parent="VirgioGalaxy/SpaceStars" index="20" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar22" parent="VirgioGalaxy/SpaceStars" index="21" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar23" parent="VirgioGalaxy/SpaceStars" index="22" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar24" parent="VirgioGalaxy/SpaceStars" index="23" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar26" parent="VirgioGalaxy/SpaceStars" index="24" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar27" parent="VirgioGalaxy/SpaceStars" index="25" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar28" parent="VirgioGalaxy/SpaceStars" index="26" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar25" parent="VirgioGalaxy/SpaceStars" index="27" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar29" parent="VirgioGalaxy/SpaceStars" index="28" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar30" parent="VirgioGalaxy/SpaceStars" index="29" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar31" parent="VirgioGalaxy/SpaceStars" index="30" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar32" parent="VirgioGalaxy/SpaceStars" index="31" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar33" parent="VirgioGalaxy/SpaceStars" index="32" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar34" parent="VirgioGalaxy/SpaceStars" index="33" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar35" parent="VirgioGalaxy/SpaceStars" index="34" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar36" parent="VirgioGalaxy/SpaceStars" index="35" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar37" parent="VirgioGalaxy/SpaceStars" index="36" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar38" parent="VirgioGalaxy/SpaceStars" index="37" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar39" parent="VirgioGalaxy/SpaceStars" index="38" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar40" parent="VirgioGalaxy/SpaceStars" index="39" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar41" parent="VirgioGalaxy/SpaceStars" index="40" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar42" parent="VirgioGalaxy/SpaceStars" index="41" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar43" parent="VirgioGalaxy/SpaceStars" index="42" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
-[node name="SpaceStar44" parent="VirgioGalaxy/SpaceStars" index="43" node_paths=PackedStringArray("_landing")]
-_landing = NodePath("")
-
 [node name="GalaxyPlayerSpaceship" parent="." node_paths=PackedStringArray("_selectedSpaceObject") instance=ExtResource("3_2fgn0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.46105, 31.6769)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.43073, 7.95836)
 motion_mode = 1
 platform_on_leave = 2
 platform_floor_layers = 4294950911
@@ -165,7 +33,7 @@ _selectedSpaceObject = NodePath("../VirgioGalaxy/CenterOfVirgioGalaxy")
 _stats = SubResource("Resource_31471")
 
 [node name="MainCamera" type="Camera3D" parent="."]
-transform = Transform3D(0.967683, -0.107767, 0.227983, -0.00205534, 0.900682, 0.434474, -0.252162, -0.420902, 0.871353, -12.7832, 1.69201, 21.5486)
+transform = Transform3D(0.658353, 0.328252, -0.677364, -0.00205535, 0.900682, 0.434474, 0.752706, -0.284645, 0.593641, -7.81429, 3.94187, 13.9993)
 current = true
 size = 20.936
 script = ExtResource("5_bplft")

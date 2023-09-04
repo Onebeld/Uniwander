@@ -1,340 +1,246 @@
-[gd_scene load_steps=20 format=3 uid="uid://dxu3tp1tlem5s"]
+[gd_scene load_steps=19 format=3 uid="uid://bla511eoybshg"]
 
-[ext_resource type="PackedScene" path="res://GameObjects/SpaceObjects/CentersOfGalaxy/CenterOfVirgioGalaxy.tscn" id="1_ro2xw"]
-[ext_resource type="PackedScene" path="res://GameObjects/SpaceObjects/Stars/SpaceStar.tscn" id="2_7hoef"]
-[ext_resource type="Script" path="res://Scripts/GameObjects/SpaceObjects/CenterOfGalaxy.cs" id="2_qu7cc"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Red/RedSmall.tres" id="3_rr1ly"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Red/RedMedium.tres" id="4_3lirp"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Red/RedBig.tres" id="5_dwlei"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Red/RedGiant.tres" id="6_vmc4i"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Blue/BlueSmall.tres" id="7_m5jw0"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Blue/BlueMedium.tres" id="8_chsve"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Blue/BlueBig.tres" id="9_orpm6"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Blue/BlueGiant.tres" id="10_vflwm"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteSmall.tres" id="11_0e8of"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteMedium.tres" id="12_fqrjx"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteBig.tres" id="13_g4ann"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteGiant.tres" id="14_my0l6"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Yellow/YellowSmall.tres" id="15_ebhqh"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Yellow/YellowMedium.tres" id="16_nfj8k"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Yellow/YellowBig.tres" id="17_1xwgd"]
-[ext_resource type="Resource" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Yellow/YellowGiant.tres" id="18_82yl4"]
+[ext_resource type="PackedScene" uid="uid://lhq40rvxyveq" path="res://GameObjects/SpaceObjects/Galaxies/Virgio/Objects/CenterOfVirgioGalaxy.tscn" id="1_djxwh"]
+[ext_resource type="PackedScene" uid="uid://cwq63yyu30dmk" path="res://GameObjects/SpaceObjects/Stars/SpaceStar.tscn" id="2_bt41m"]
+[ext_resource type="Resource" uid="uid://bcccxyeyocguu" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Red/RedSmall.tres" id="3_2f8yc"]
+[ext_resource type="Resource" uid="uid://dreso4o3v1y6" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Red/RedMedium.tres" id="4_jcruo"]
+[ext_resource type="Resource" uid="uid://dts1ktccrp8xg" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Red/RedBig.tres" id="5_ppr16"]
+[ext_resource type="Resource" uid="uid://b3mkdw1xji6oo" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Red/RedGiant.tres" id="6_vtii7"]
+[ext_resource type="Resource" uid="uid://bmw88tl3cwy5w" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Blue/BlueSmall.tres" id="7_gpd2w"]
+[ext_resource type="Resource" uid="uid://drqf34sgjova0" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Blue/BlueMedium.tres" id="8_84jpe"]
+[ext_resource type="Resource" uid="uid://c7khxr7cuf52c" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Blue/BlueBig.tres" id="9_ef86q"]
+[ext_resource type="Resource" uid="uid://kmt6sx7fafcr" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Blue/BlueGiant.tres" id="10_wcfcj"]
+[ext_resource type="Resource" uid="uid://c0jfqeuwvtuia" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteSmall.tres" id="11_b3v8j"]
+[ext_resource type="Resource" uid="uid://c0e3hcuc8vtv7" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteMedium.tres" id="12_rax1v"]
+[ext_resource type="Resource" uid="uid://buqiswohjwtfb" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteBig.tres" id="13_0xjov"]
+[ext_resource type="Resource" uid="uid://v6nyq1qkpd17" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Yellow/YellowSmall.tres" id="14_lnjg8"]
+[ext_resource type="Resource" uid="uid://dnagylxv8lmjq" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Yellow/YellowMedium.tres" id="15_jpkiy"]
+[ext_resource type="Resource" uid="uid://mofv84eyfkfn" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Yellow/YellowBig.tres" id="16_pp2lv"]
+[ext_resource type="Resource" uid="uid://resyshp24loy" path="res://GameObjects/SpaceObjects/Stars/StarTypes/Yellow/YellowGiant.tres" id="17_d1lvs"]
+[ext_resource type="Resource" uid="uid://bkbit1l33ihi5" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteGiant.tres" id="18_xgwtv"]
 
 [node name="VirgioGalaxy" type="Node3D"]
-
-[node name="CenterOfVirgioGalaxy" parent="." instance=ExtResource("1_ro2xw")]
-transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0.0164037, 0, 0.0716301)
-script = ExtResource("2_qu7cc")
-_landing = null
-
-[node name="SpaceStars" type="Node" parent="."]
-
-[node name="SpaceStar" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.3113, 1.19209e-07, 7.07672)
-_types = [ExtResource("3_rr1ly")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar2" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -16.9747, 1.19209e-07, 7.07672)
-_types = [ExtResource("4_3lirp")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar3" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -13.2812, 1.19209e-07, 7.07672)
-_types = [ExtResource("5_dwlei")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar4" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -9.76756, 1.19209e-07, 7.07672)
-_types = [ExtResource("6_vmc4i")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar5" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.3113, 1.19209e-07, 10.4944)
-_types = [ExtResource("7_m5jw0")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar6" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -16.7628, 1.19209e-07, 10.4944)
-_types = [ExtResource("8_chsve")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar7" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -13.5394, 1.19209e-07, 10.4944)
-_types = [ExtResource("9_orpm6")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar8" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.2358, 1.19209e-07, 10.4944)
-_types = [ExtResource("10_vflwm")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar9" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.3113, 1.19209e-07, 14.1636)
-_types = [ExtResource("11_0e8of")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar10" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -16.7628, 1.19209e-07, 14.1636)
-_types = [ExtResource("12_fqrjx")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar11" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -13.5394, 1.19209e-07, 14.1636)
-_types = [ExtResource("13_g4ann")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar12" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.2358, 1.19209e-07, 14.1636)
-_types = [ExtResource("14_my0l6")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar13" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -20.3113, 1.19209e-07, 18.1326)
-_types = [ExtResource("15_ebhqh")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar14" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -16.7628, 1.19209e-07, 18.1326)
-_types = [ExtResource("16_nfj8k")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar15" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -13.5394, 1.19209e-07, 18.1326)
-_types = [ExtResource("17_1xwgd")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar16" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.2358, 1.19209e-07, 18.1326)
-_types = [ExtResource("18_82yl4")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar17" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -54.194, 1.19209e-07, 7.54519)
-_types = [ExtResource("3_rr1ly"), ExtResource("3_rr1ly")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar18" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -50.4637, 1.19209e-07, 7.54519)
-_types = [ExtResource("4_3lirp"), ExtResource("3_rr1ly")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar19" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.0774, 1.19209e-07, 7.54519)
-_types = [ExtResource("5_dwlei"), ExtResource("3_rr1ly")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar20" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -43.7302, 1.19209e-07, 7.54519)
-_types = [ExtResource("6_vmc4i"), ExtResource("3_rr1ly")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar21" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -54.194, 1.19209e-07, 12.1675)
-_types = [ExtResource("7_m5jw0"), ExtResource("7_m5jw0")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar22" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -50.4637, 1.19209e-07, 12.1675)
-_types = [ExtResource("8_chsve"), ExtResource("7_m5jw0")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar23" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.0774, 1.19209e-07, 12.1675)
-_types = [ExtResource("9_orpm6"), ExtResource("7_m5jw0")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar24" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -43.7302, 1.19209e-07, 12.1675)
-_types = [ExtResource("10_vflwm"), ExtResource("7_m5jw0")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar26" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -40.316, 1.19209e-07, 7.54519)
-_types = [ExtResource("3_rr1ly"), ExtResource("4_3lirp")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar27" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -36.9297, 1.19209e-07, 7.54519)
-_types = [ExtResource("3_rr1ly"), ExtResource("5_dwlei")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar28" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -33.5825, 1.19209e-07, 7.54519)
-_types = [ExtResource("3_rr1ly"), ExtResource("6_vmc4i")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar25" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -40.3534, 1.19209e-07, 12.1675)
-_types = [ExtResource("7_m5jw0"), ExtResource("8_chsve")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar29" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -36.9671, 1.19209e-07, 12.1675)
-_types = [ExtResource("7_m5jw0"), ExtResource("9_orpm6")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar30" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -33.6199, 1.19209e-07, 12.1675)
-_types = [ExtResource("7_m5jw0"), ExtResource("10_vflwm")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar31" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -54.194, 1.19209e-07, 16.483)
-_types = [ExtResource("11_0e8of"), ExtResource("11_0e8of")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar32" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -50.4637, 1.19209e-07, 16.483)
-_types = [ExtResource("12_fqrjx"), ExtResource("11_0e8of")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar33" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.0774, 1.19209e-07, 16.483)
-_types = [ExtResource("13_g4ann"), ExtResource("11_0e8of")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar34" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -43.7302, 1.19209e-07, 16.4115)
-_types = [ExtResource("14_my0l6"), ExtResource("11_0e8of")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar35" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -40.3534, 1.19209e-07, 16.4445)
-_types = [ExtResource("11_0e8of"), ExtResource("12_fqrjx")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar36" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -36.9671, 1.19209e-07, 16.4445)
-_types = [ExtResource("11_0e8of"), ExtResource("13_g4ann")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar37" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -33.6199, 1.19209e-07, 16.4445)
-_types = [ExtResource("11_0e8of"), ExtResource("14_my0l6")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar38" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -54.194, 1.19209e-07, 21.4167)
-_types = [ExtResource("15_ebhqh"), ExtResource("15_ebhqh")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar39" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -50.4637, 1.19209e-07, 21.4167)
-_types = [ExtResource("16_nfj8k"), ExtResource("15_ebhqh")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar40" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -47.0774, 1.19209e-07, 21.4167)
-_types = [ExtResource("17_1xwgd"), ExtResource("15_ebhqh")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar41" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -43.7302, 1.19209e-07, 21.3452)
-_types = [ExtResource("18_82yl4"), ExtResource("15_ebhqh")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar42" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -40.3534, 1.19209e-07, 21.3782)
-_types = [ExtResource("15_ebhqh"), ExtResource("16_nfj8k")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar43" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -36.9671, 1.19209e-07, 21.3782)
-_types = [ExtResource("15_ebhqh"), ExtResource("17_1xwgd")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="SpaceStar44" parent="SpaceStars" groups=["stars"] instance=ExtResource("2_7hoef")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -33.6199, 1.19209e-07, 21.3782)
-_types = [ExtResource("15_ebhqh"), ExtResource("18_82yl4")]
-_landing = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.639527, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
-_starsNode = null
-
-[node name="VisualEffects" type="Node" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CenterOfVirgioGalaxy" parent="." instance=ExtResource("1_djxwh")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+
+[node name="Stars" type="Node" parent="."]
+
+[node name="SpaceStar" parent="Stars" instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -23.5921, 0, 6.37763)
+_starTypes = [ExtResource("3_2f8yc")]
+
+[node name="SpaceStar2" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -6.93191, 1.90744, 26.1427)
+_starTypes = [ExtResource("4_jcruo")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar3" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -19.7362, -2.52296, 37.3074)
+_starTypes = [ExtResource("5_ppr16")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar4" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 27.2572, 2.61455, -24.3106)
+_starTypes = [ExtResource("6_vtii7")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar5" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -14.7398, -2.9214, -21.6554)
+_starTypes = [ExtResource("7_gpd2w")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar6" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 27.9158, -0.53965, 7.33491)
+_starTypes = [ExtResource("8_84jpe")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar7" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -1.65054, 3, -38.7665)
+_starTypes = [ExtResource("9_ef86q")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar8" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.357343, -0.89045, -16.7988)
+_starTypes = [ExtResource("10_wcfcj")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar9" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -7.18777, -0.706929, 9.2107)
+_starTypes = [ExtResource("11_b3v8j")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar10" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 19.1832, 2, -4.51015)
+_starTypes = [ExtResource("12_rax1v")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar11" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -32.0562, 3.09348, -7.91894)
+_starTypes = [ExtResource("13_0xjov")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar12" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 8.44472, -0.896587, 24.8946)
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar13" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -16.5937, 0.434965, 17.2541)
+_starTypes = [ExtResource("14_lnjg8")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar14" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 10.9405, -0.615116, -25.1154)
+_starTypes = [ExtResource("15_jpkiy")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar15" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -18.7747, -0.406759, -3.46515)
+_starTypes = [ExtResource("16_pp2lv")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar16" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 14.6074, 0, 3.67191)
+_starTypes = [ExtResource("17_d1lvs")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar17" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 22.1327, -0.86217, 24.6989)
+_starTypes = [ExtResource("3_2f8yc"), ExtResource("3_2f8yc")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar18" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -31.8398, 0.923878, 20.981)
+_starTypes = [ExtResource("4_jcruo"), ExtResource("3_2f8yc")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar19" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -16.1554, 1.98159, -31.8553)
+_starTypes = [ExtResource("5_ppr16"), ExtResource("3_2f8yc")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar20" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 32.9007, 1.82379, -15.4543)
+_starTypes = [ExtResource("6_vtii7"), ExtResource("3_2f8yc")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar21" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -2.5299, 0.908925, 31.8279)
+_starTypes = [ExtResource("3_2f8yc"), ExtResource("4_jcruo")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar22" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 28.4524, 1, 15.952)
+_starTypes = [ExtResource("3_2f8yc"), ExtResource("5_ppr16")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar23" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 13.5696, 1.80318, -37.9825)
+_starTypes = [ExtResource("3_2f8yc"), ExtResource("6_vtii7")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar24" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 11.5955, -1.88133, 36.1007)
+_starTypes = [ExtResource("7_gpd2w"), ExtResource("7_gpd2w")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar25" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 27.426, 32.5628, 34.9562)
+_starTypes = [ExtResource("8_84jpe"), ExtResource("7_gpd2w")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar26" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 28.5168, 32.5628, 34.9562)
+_starTypes = [ExtResource("9_ef86q"), ExtResource("7_gpd2w")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar27" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 29.634, 32.5628, 34.9562)
+_starTypes = [ExtResource("10_wcfcj"), ExtResource("7_gpd2w")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar28" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 30.8238, 32.5628, 34.9562)
+_starTypes = [ExtResource("7_gpd2w"), ExtResource("8_84jpe")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar29" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 31.9147, 32.5628, 34.9562)
+_starTypes = [ExtResource("7_gpd2w"), ExtResource("9_ef86q")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar30" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 6.27776, 0, 3.95654)
+_starTypes = [ExtResource("7_gpd2w"), ExtResource("10_wcfcj")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar31" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 26.3396, 32.5628, 36.2473)
+_starTypes = [ExtResource("11_b3v8j"), ExtResource("11_b3v8j")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar32" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 27.426, 32.5628, 36.2473)
+_starTypes = [ExtResource("12_rax1v"), ExtResource("11_b3v8j")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar33" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 28.5168, 32.5628, 36.2473)
+_starTypes = [ExtResource("13_0xjov"), ExtResource("11_b3v8j")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar34" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 29.634, 32.5628, 36.2473)
+_starTypes = [ExtResource("18_xgwtv"), ExtResource("11_b3v8j")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar35" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 30.8238, 32.5628, 36.2473)
+_starTypes = [ExtResource("11_b3v8j"), ExtResource("12_rax1v")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar36" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 31.9147, 32.5628, 36.2473)
+_starTypes = [ExtResource("11_b3v8j"), ExtResource("13_0xjov")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar37" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 33.0319, 32.5628, 36.2473)
+_starTypes = [ExtResource("11_b3v8j"), ExtResource("18_xgwtv")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar38" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 26.3396, 32.5628, 37.6008)
+_starTypes = [ExtResource("14_lnjg8"), ExtResource("14_lnjg8")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar39" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 27.426, 32.5628, 37.6008)
+_starTypes = [ExtResource("15_jpkiy"), ExtResource("14_lnjg8")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar40" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 28.5168, 32.5628, 37.6008)
+_starTypes = [ExtResource("16_pp2lv"), ExtResource("14_lnjg8")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar41" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 29.634, 32.5628, 37.6008)
+_starTypes = [ExtResource("17_d1lvs"), ExtResource("14_lnjg8")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar42" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 30.8238, 32.5628, 37.6008)
+_starTypes = [ExtResource("14_lnjg8"), ExtResource("15_jpkiy")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar43" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 31.9147, 32.5628, 37.6008)
+_starTypes = [ExtResource("14_lnjg8"), ExtResource("16_pp2lv")]
+_landing = NodePath("../SpaceStar/LandingPosition")
+
+[node name="SpaceStar44" parent="Stars" node_paths=PackedStringArray("_landing") instance=ExtResource("2_bt41m")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 33.0319, 32.5628, 37.6008)
+_starTypes = [ExtResource("14_lnjg8"), ExtResource("17_d1lvs")]
+_landing = NodePath("../SpaceStar/LandingPosition")

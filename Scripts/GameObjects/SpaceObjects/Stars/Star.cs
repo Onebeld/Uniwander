@@ -11,12 +11,12 @@ namespace Uniwander.Scripts.GameObjects.SpaceObjects.Stars;
 public partial class Star : SpaceObject
 {
 	private const float Rad = Mathf.Pi / 180;
+
+	[Export]
+	private Array<StarType> _starTypes = new();
 	
 	[Export] 
 	private StarStats? _stats;
-
-	[Export]
-	private Array<StarType> _types;
 
 	// Needed when we make the star sprites look at the camera
 	private Node3D _starsNode = null!;
@@ -25,19 +25,22 @@ public partial class Star : SpaceObject
 
 	public override void _Ready()
 	{
+		_camera3D = GetViewport().GetCamera3D();
 		_starsNode = GetNode<Node3D>("Stars");
-
+		
 		foreach (Node child in _starsNode.GetChildren())
 			_starsNode.RemoveChild(child);
+			
+		if (_starTypes.Count == 0) return;
 
-		if (_types.Count == 1)
-			CreateStarSprite(_types[0]);
+		if (_starTypes.Count == 1)
+			CreateStarSprite(_starTypes[0]);
 		else
 		{
-			float sector = 360.0f / _types.Count;
+			float sector = 360.0f / _starTypes.Count;
 			float currentSector = sector;
 
-			foreach (StarType starType in _types)
+			foreach (StarType starType in _starTypes)
 			{
 				Node3D starSprite = CreateStarSprite(starType);
 
@@ -45,8 +48,6 @@ public partial class Star : SpaceObject
 				currentSector += sector;
 			}
 		}
-
-		_camera3D = GetViewport().GetCamera3D();
 	}
 
 	public override void _Process(double delta)
@@ -62,8 +63,6 @@ public partial class Star : SpaceObject
 				node3D.LookAt(cameraPos, new Vector3(0, 1, 0));
 		}
 	}
-
-	public Array<StarType> GetStars() => _types;
 
 	public void SetName(string name)
 	{
@@ -84,7 +83,7 @@ public partial class Star : SpaceObject
 		
 		float size = GetSize(starType.StarSize);
 		
-		sprite3D.Scale = new Vector3(size, size, size);
+		node3D.Scale = new Vector3(size, size, size);
 		sprite3D.Modulate = Color.FromString($"#{(uint)starType.StarColor:X}", Colors.White);
 
 		_starsNode.AddChild(node3D);

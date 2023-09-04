@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwq63yyu30dmk"]
+
+[ext_resource type="Script" path="res://Scripts/GameObjects/SpaceObjects/Stars/Star.cs" id="1_ulbhc"]
+[ext_resource type="Resource" uid="uid://bkbit1l33ihi5" path="res://GameObjects/SpaceObjects/Stars/StarTypes/White/WhiteGiant.tres" id="2_kns3u"]
+[ext_resource type="PackedScene" uid="uid://bo8qodc7r3ia6" path="res://GameObjects/SpaceObjects/Stars/StarSprite.tscn" id="3_6prjh"]
+[ext_resource type="Script" path="res://Scripts/GameObjects/SpaceObjects/Stars/StarSprite.cs" id="4_l11lg"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j10hx"]
+
+[node name="SpaceStar" type="StaticBody3D" node_paths=PackedStringArray("_landing")]
+script = ExtResource("1_ulbhc")
+_starTypes = [ExtResource("2_kns3u")]
+_landing = NodePath("LandingPosition")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_j10hx")
+
+[node name="LandingPosition" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.494337, 0)
+
+[node name="Stars" type="Node3D" parent="."]
+transform = Transform3D(0.925223, 0.379424, 0, -0.379424, 0.925223, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="StarSprite" type="Node3D" parent="Stars" instance=ExtResource("3_6prjh")]
+transform = Transform3D(0.23, 0, 0, 0, 0.23, 0, 0, 0, 0.23, 0, 0, 0)
+script = ExtResource("4_l11lg")
+
+[connection signal="input_event" from="." to="." method="OnInputEvent"]

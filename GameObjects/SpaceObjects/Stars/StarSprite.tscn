@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bo8qodc7r3ia6"]
+
+[ext_resource type="Script" path="res://Scripts/GameObjects/SpaceObjects/Stars/StarSprite.cs" id="1_felgf"]
+[ext_resource type="Texture2D" uid="uid://1r0k1tnrm1xo" path="res://Assets/Sprites/star.png" id="2_qkem7"]
+
+[sub_resource type="Animation" id="Animation_5gxr8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_523rs"]
+resource_name = "glow_star"
+length = 9.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1, 2.4, 3.8, 5.6, 7.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.12, 1.12, 1.12), Vector3(0.965, 0.965, 0.965), Vector3(1.172, 1.172, 1.172), Vector3(0.928, 0.928, 0.928), Vector3(1.104, 1.104, 1.104)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j0kwf"]
+_data = {
+"RESET": SubResource("Animation_5gxr8"),
+"glow_star": SubResource("Animation_523rs")
+}
+
+[node name="StarSprite" type="Node3D"]
+script = ExtResource("1_felgf")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource("2_qkem7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j0kwf")
+}

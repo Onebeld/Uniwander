@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="StarType" load_steps=2 format=3 uid="uid://c7khxr7cuf52c"]
+
+[ext_resource type="Script" path="res://Scripts/GameObjects/SpaceObjects/Stars/StarType.cs" id="1_ufi3s"]
+
+[resource]
+script = ExtResource("1_ufi3s")
+StarColor = 5030143
+StarSize = 2
